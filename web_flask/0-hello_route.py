@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-#Script that starts a Flask web application
+"""
+Script that starts a Flask web application
+"""
 
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def hell0_world():
 	return "Hello HBNB!"
 
