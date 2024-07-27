@@ -13,6 +13,9 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hell0_world():
+	"""
+	displays 'Hello HBNB!"
+	"""
 	return "Hello HBNB!"
 
 if __name__ == '__main__':
