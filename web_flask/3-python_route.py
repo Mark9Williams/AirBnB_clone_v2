@@ -17,12 +17,13 @@ def hbnb():
     return "HBNB"
 
 @app.route('/c/<text>', strict_slashes=False)
-def c_text():
+def c_text(text):
     """Route to display 'c' followed by value of the text variable"""
-    return "c {}".format(text.replace('_', ' '))
+    return "C {}".format(text.replce('_', ' '))
 
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python_text():
+def python_text(text='is cool'):
     """displays 'Python', followed by the value of text"""
     return "Python {}".format(text.replace('_', ' '))
 
