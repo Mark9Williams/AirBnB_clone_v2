@@ -3,7 +3,7 @@
 A script that starts a Flask web application listening on 0.0.0.0, port 5000
 """
 
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -45,10 +45,10 @@ def number_template(n):
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
-def odd_or_even():
+def odd_or_even(n):
 	"""display a HTML page only if n is an integer"""
 	txt = "even" if n % 2 == 0 else "odd"
-	return render_template('6-number_odd_or_even.html', number=n, txt=xtx)
+	return render_template('6-number_odd_or_even.html', number=n, txt=txt)
 
 
 if __name__ == '__main__':
